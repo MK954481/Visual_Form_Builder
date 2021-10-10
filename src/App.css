@@ -101,7 +101,7 @@
   background: #212121;
   border-radius: 6px;
   padding: 4px;
-  /* justify-content: center; */
+  margin-right: 10px;
 }
 
 #tAlabel {
@@ -262,31 +262,3 @@ select {
   flex-direction: column;
   min-height: 70px;
 }
-/* 
-.form__area__wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 0.8;
-  color: #ffffff;
-  background: #212121;
-  border-radius: 4px;
-  padding: 5px;
-  margin: 4px;
-}
-
-.submit_btn {
-  width: 100px;
-  height: 25px;
-  align-self: center;
-  border-radius: 40px;
-  border: none;
-}
-
-.submit_btn:hover {
-  cursor: pointer;
-}
-
-.form__area {
-  border: 1px dotted white;
-  padding: 5px;
-} */
