@@ -1,6 +1,5 @@
 import React from "react";
 import "../../App.css";
-// import { Formik, Form, Field } from "formik";
 
 const Droparea = () => {
   const dropElement = (e) => {
@@ -19,13 +18,20 @@ const Droparea = () => {
             tAdiv.setAttribute("id", "tAdiv");
             var textarea = document.createElement("textarea");
             textarea.setAttribute("id", "tA");
-            var tAlabel = prompt("Type Label");
+            var tAlabel = prompt("Type Label for Text Area");
             var tA_Label = document.createElement("label");
             tA_Label.innerHTML = `${tAlabel}`;
             tA_Label.id = "tAlabel";
+            if (tAlabel === null || tAlabel.length === 0) {
+              return;
+            }
             tAdiv.appendChild(tA_Label);
             tAdiv.appendChild(textarea);
             dropzone.appendChild(tAdiv);
+            textarea.addEventListener("change", (e) => {
+              console.log(e.target.value);
+              textarea.innerHTML = e.target.value;
+            });
           }
           break;
         case "widget2":
@@ -35,13 +41,20 @@ const Droparea = () => {
             var counter = document.createElement("input");
             counter.type = "number";
             counter.setAttribute("id", "cnt");
-            var cntlabel = prompt("Type Label");
+
+            var cntlabel = prompt("Type Label for Counter");
             var cnt_Label = document.createElement("label");
             cnt_Label.innerHTML = `${cntlabel}`;
             cnt_Label.id = "cntlabel";
+            if (cntlabel === null || cntlabel.length === 0) {
+              return;
+            }
             cntdiv.appendChild(cnt_Label);
             cntdiv.appendChild(counter);
             dropzone.appendChild(cntdiv);
+            counter.addEventListener("change", (et) => {
+              document.getElementById("cnt").defaultValue = et.target.value;
+            });
           }
           break;
         case "widget3":
@@ -51,10 +64,13 @@ const Droparea = () => {
             var checkbox = document.createElement("input");
             checkbox.type = "checkbox";
             checkbox.setAttribute("id", "cb");
-            var cblabel = prompt("Type Label");
+            var cblabel = prompt("Type Label for Checkbox");
             var cb_Label = document.createElement("label");
             cb_Label.innerHTML = `${cblabel}`;
             cb_Label.id = "cblabel";
+            if (cblabel === null || cblabel.length === 0) {
+              return;
+            }
             cbdiv.appendChild(cb_Label);
 
             cbdiv.appendChild(checkbox);
@@ -65,13 +81,21 @@ const Droparea = () => {
           {
             var dropdowndiv = document.createElement("div");
             dropdowndiv.setAttribute("id", "ddiv");
+            var ddlabel = prompt("Type Label for List");
             var dropdown = document.createElement("select");
-            var option = new Option("option1", "value", false, false);
-            dropdown.appendChild(option);
-            var ddlabel = prompt("Type Label");
+            if (ddlabel === null || ddlabel.length === 0) {
+              return;
+            }
+            var n = prompt("How many options do you want to add");
+            for (var i = 0; i < n; i++) {
+              var opt = prompt(`Type option ${i + 1}: `);
+              var option = new Option(`${opt}`, "value", false, false);
+              dropdown.appendChild(option);
+            }
             var dd_Label = document.createElement("label");
             dd_Label.innerHTML = `${ddlabel}`;
             dd_Label.id = "dropdownlabel";
+
             dropdowndiv.appendChild(dd_Label);
 
             dropdowndiv.appendChild(dropdown);
@@ -82,8 +106,13 @@ const Droparea = () => {
           {
             var datediv = document.createElement("div");
             datediv.setAttribute("id", "dtdiv");
+            var dtlabel = prompt("Type Label for Date");
+            var dt_Label = document.createElement("label");
+            dt_Label.innerHTML = `${dtlabel}`;
+            dt_Label.id = "datelabel";
             var date = document.createElement("input");
             date.type = "date";
+            datediv.appendChild(dt_Label);
             datediv.appendChild(date);
             dropzone.appendChild(datediv);
           }
@@ -97,8 +126,6 @@ const Droparea = () => {
   };
 
   const handleSubmit = (e) => {
-    // console.log(document.getElementById("my_form"));
-    // console.log(document.getElementById("droparea").innerHTML);
     const data = {
       formData: document.getElementById("droparea").innerHTML,
     };
@@ -136,6 +163,4 @@ const Droparea = () => {
     </div>
   );
 };
-// console.log(JSON.stringify(document.getElementById("droparea__main")));
-
 export default Droparea;

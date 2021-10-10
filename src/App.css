@@ -230,6 +230,24 @@ select {
   border-radius: 40px;
 }
 
+#dtdiv {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  padding: 4px;
+  margin: 5px;
+  z-index: 10;
+  resize: both;
+  overflow: hidden;
+}
+
+#datelabel {
+  color: white;
+  text-align: left;
+  width: 400px;
+}
+
 .submit__flex {
   display: flex;
   margin: 2rem 1rem;
