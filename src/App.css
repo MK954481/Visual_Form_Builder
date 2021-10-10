@@ -2,37 +2,273 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.head__wrapper {
+  display: flex;
+  justify-content: center;
+  background: #212121;
+  height: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.head__wrapper__title {
+  color: #ffffff;
+  font-size: 2em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#main__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+#sidebar {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-width: 180px;
+  background-color: #212121;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#widget1 {
+  display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #aaa;
+  color: black;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+#widget2 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #aaa;
+  color: black;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+#widget3 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #aaa;
+  color: black;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+#widget4 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #aaa;
+  color: black;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+#widget5 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #aaa;
+  color: black;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+#droparea {
+  display: flex;
+  flex-grow: 0.75;
+  flex-direction: column;
+  vertical-align: top;
+  background: #212121;
+  border-radius: 6px;
+  padding: 4px;
+  /* justify-content: center; */
+}
+
+#tAlabel {
   color: white;
+  text-align: left;
+  width: 400px;
 }
 
-.App-link {
-  color: #61dafb;
+#cntlabel {
+  color: white;
+  text-align: left;
+  width: 400px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#cb {
+  margin-top: 8px;
+  margin-left: 2px;
 }
+
+#cbdiv {
+  display: flex;
+  z-index: 9;
+  width: 400px;
+  padding: 6px 12px;
+  color: #555;
+  background-image: none;
+  border-radius: 4px;
+  resize: horizontal;
+  overflow: hidden;
+  margin: 8px;
+}
+
+#cblabel {
+  color: white;
+  text-align: left;
+  width: 400px;
+}
+
+#dtdiv {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  z-index: 10;
+}
+
+#tA {
+  display: flex;
+  z-index: 9;
+  width: 400px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: both;
+}
+
+#tAdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 50px;
+  z-index: 10;
+  margin: 8px;
+}
+
+#cnt {
+  font-size: 14px;
+  height: inherit;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#cntdiv {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  margin-left: 3px;
+  color: #555;
+  background-image: none;
+  resize: both;
+  overflow: hidden;
+}
+
+select {
+  display: flex;
+  z-index: 9;
+  padding: 6px 12px;
+  font-size: 14px;
+  height: inherit;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#ddiv {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  padding: 4px;
+  margin: 5px;
+  z-index: 10;
+  resize: both;
+  overflow: hidden;
+}
+
+#dropdownlabel {
+  color: white;
+  text-align: left;
+  width: 400px;
+}
+
+#droparea_desc {
+  padding: 10px;
+  border: 2px dotted white;
+  background-color: #aaa;
+  border-radius: 40px;
+}
+
+.submit__flex {
+  display: flex;
+  margin: 2rem 1rem;
+  margin-top: 1px;
+  border-radius: 8px;
+  z-index: -999;
+}
+
+.droparea__main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 70px;
+}
+/* 
+.form__area__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0.8;
+  color: #ffffff;
+  background: #212121;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 4px;
+}
+
+.submit_btn {
+  width: 100px;
+  height: 25px;
+  align-self: center;
+  border-radius: 40px;
+  border: none;
+}
+
+.submit_btn:hover {
+  cursor: pointer;
+}
+
+.form__area {
+  border: 1px dotted white;
+  padding: 5px;
+} */
